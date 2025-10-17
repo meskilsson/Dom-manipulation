@@ -58,5 +58,14 @@ btnRemove.addEventListener('click', () => {
     }
 });
 
+btnToggle.addEventListener('click', () => {
+    let selected = document.querySelector('.selected');
+    if (selected) {
+        selected.classList.toggle('highlight');
+    }
+});
+
+
+
 
 
