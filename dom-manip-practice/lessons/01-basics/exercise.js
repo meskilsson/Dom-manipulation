@@ -51,4 +51,12 @@ btnAdd.addEventListener('click', () => {
     }
 });
 
+btnRemove.addEventListener('click', () => {
+    let selected = document.querySelector('.selected');
+    if (selected) {
+        selected.remove();
+    }
+});
+
+
 
