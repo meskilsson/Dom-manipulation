@@ -32,5 +32,9 @@ list.addEventListener('click', (e) => {
     })
 
     clicked.classList.add('selected');
+
+    if (clicked) {
+        btnRemove.disabled = false;
+    }
 });
 
