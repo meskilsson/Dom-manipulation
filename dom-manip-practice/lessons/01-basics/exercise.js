@@ -38,3 +38,17 @@ list.addEventListener('click', (e) => {
     }
 });
 
+btnTitle.addEventListener('click', () => {
+    title.textContent = "Whatever";
+});
+
+btnAdd.addEventListener('click', () => {
+    let addFruit = prompt("Add a new fruit: ");
+    if (addFruit) {
+        let newLi = document.createElement('li');
+        newLi.textContent = addFruit;
+        list.appendChild(newLi);
+    }
+});
+
+
