@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forms — Sign Up (Solution)</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      form { display: grid; gap: .75rem; max-width: 420px; }
+      .field { display:flex; flex-direction:column; gap:.25rem; }
+      .msg { min-height: 1.25rem; font-size: .85rem; }
+      .error { color: #b91c1c; }
+      .success { color: #065f46; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form id="form" novalidate>
+        <div class="field">
+          <label>Name <input id="name" name="name" required /></label>
+          <div class="msg" id="msg-name"></div>
+        </div>
+        <div class="field">
+          <label>Email <input id="email" name="email" type="email" required /></label>
+          <div class="msg" id="msg-email"></div>
+        </div>
+        <div class="field">
+          <label>Password <input id="pwd" name="pwd" type="password" minlength="8" required /></label>
+          <div class="msg" id="msg-pwd"></div>
+        </div>
+        <div class="field">
+          <label>Confirm Password <input id="pwd2" name="pwd2" type="password" required /></label>
+          <div class="msg" id="msg-pwd2"></div>
+        </div>
+        <label><input id="terms" name="terms" type="checkbox" required /> I agree to the terms</label>
+        <div class="toolbar">
+          <button id="submit">Create Account</button>
+          <button id="reset" type="button">Reset</button>
+        </div>
+        <p id="result" class="notice"></p>
+      </form>
+    </div>
+    <script src="./solution.js" type="module"></script>
+  </body>
+</html>

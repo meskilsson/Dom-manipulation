@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basics 001 — List Playground (Solution)</title>
+    <link rel="stylesheet" href="../shared.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">My Favorite Fruits</h1>
+      <div class="toolbar">
+        <button id="btn-title">Change Title</button>
+        <button id="btn-add">Add Item</button>
+        <button id="btn-remove" disabled>Remove Selected</button>
+        <button id="btn-toggle">Toggle Highlight</button>
+        <button id="btn-clear">Clear All</button>
+      </div>
+      <ul id="list">
+        <li data-id="1">Apple</li>
+        <li data-id="2">Banana</li>
+        <li data-id="3">Cherry</li>
+      </ul>
+      <p id="status" class="notice" aria-live="polite">Ready.</p>
+    </div>
+    <script src="./solution.js" type="module"></script>
+  </body>
+</html>

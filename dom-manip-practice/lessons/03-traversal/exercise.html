@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Traversal — FAQ (Exercise)</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      .faq { max-width: 650px; margin: 0 auto; }
+      .item { border-bottom: 1px solid #ddd; }
+      .q { display: flex; justify-content: space-between; cursor: pointer; padding: 1rem 0; }
+      .a { display: none; padding: 0 0 1rem; color: #444; }
+      .item.open .a { display: block; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FAQ — Traversal</h1>
+      <div class="faq" id="faq">
+        <div class="item">
+          <button class="q" aria-expanded="false">What is DOM traversal?<span>+</span></button>
+          <div class="a">Moving between related nodes: parents, children, siblings.</div>
+        </div>
+        <div class="item">
+          <button class="q" aria-expanded="false">What is closest()?<span>+</span></button>
+          <div class="a">A method to find the nearest ancestor matching a selector.</div>
+        </div>
+        <div class="item">
+          <button class="q" aria-expanded="false">Why DocumentFragment?<span>+</span></button>
+          <div class="a">To batch DOM inserts and reduce reflows.</div>
+        </div>
+      </div>
+    </div>
+    <script src="./exercise.js" type="module"></script>
+  </body>
+</html>

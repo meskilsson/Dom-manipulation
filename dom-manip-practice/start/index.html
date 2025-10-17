@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DOM Practice — Start</title>
+    <link rel="stylesheet" href="../lessons/shared.css" />
+    <style>
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+      .demo { display: flex; align-items: center; gap: .5rem; margin-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>DOM Manipulation Practice — Start</h1>
+      <p class="notice">Open the lessons in <code>lessons/</code> to follow the learning path. This start page has a tiny demo you can tweak.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h2 id="title">Hello, DOM!</h2>
+          <div class="toolbar">
+            <button id="btn-rename">Rename Title</button>
+            <button id="btn-add">Add Chip</button>
+            <button id="btn-clear">Clear Chips</button>
+          </div>
+          <div id="chips" class="demo"></div>
+          <p id="status" class="notice">Ready.</p>
+        </div>
+
+        <div class="card">
+          <h2>Lessons</h2>
+          <ul>
+            <li><a href="../lessons/01-basics/solution.html">Lesson 01 — Basics (solution)</a></li>
+            <li><a href="../lessons/02-events/solution.html">Lesson 02 — Events (solution)</a></li>
+            <li><a href="../lessons/03-traversal/solution.html">Lesson 03 — Traversal (solution)</a></li>
+            <li><a href="../lessons/04-attributes-classes-styles/solution.html">Lesson 04 — Attributes/Classes/Styles (solution)</a></li>
+            <li><a href="../lessons/05-forms/solution.html">Lesson 05 — Forms (solution)</a></li>
+            <li><a href="../lessons/06-async-fetch/solution.html">Lesson 06 — Async & Fetch (solution)</a></li>
+          </ul>
+          <p class="notice">Open the <code>exercise.html</code> first to try it yourself.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

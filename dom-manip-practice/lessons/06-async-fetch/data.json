@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Ada Lovelace",
+    "email": "ada@example.com",
+    "company": "Analytical Engines"
+  },
+  {
+    "id": 2,
+    "name": "Grace Hopper",
+    "email": "grace@example.com",
+    "company": "Compilers Inc."
+  },
+  {
+    "id": 3,
+    "name": "Linus Torvalds",
+    "email": "linus@example.com",
+    "company": "Kernel Works"
+  },
+  {
+    "id": 4,
+    "name": "Margaret Hamilton",
+    "email": "margaret@example.com",
+    "company": "Apollo Software"
+  },
+  {
+    "id": 5,
+    "name": "Guido van Rossum",
+    "email": "guido@example.com",
+    "company": "Pythonistas"
+  }
+]

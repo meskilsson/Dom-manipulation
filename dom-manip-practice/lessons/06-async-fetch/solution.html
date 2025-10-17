@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Async & Fetch — Users (Solution)</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+      .skeleton { height: 90px; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: .75rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Users Directory</h1>
+      <input id="filter" placeholder="Filter by name or company..." />
+      <div id="state" class="notice">Idle</div>
+      <div id="list" class="cards" aria-live="polite"></div>
+    </div>
+    <script src="./solution.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Attributes & Classes — Profile Card (Solution)</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      .profile { display: grid; grid-template-columns: 120px 1fr; gap: 1rem; align-items: center; }
+      .avatar { width: 120px; height: 120px; object-fit: cover; }
+      .rounded { border-radius: 60px; }
+      .shadow { box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05); }
+      .hl { outline: 3px dashed #f59e0b; outline-offset: 4px; }
+      .role { color: #6b7280; }
+      [data-theme="dark"] { background: #111827; color: #f9fafb; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile Card Editor</h1>
+      <div class="card">
+        <div id="preview" class="profile" data-theme="light">
+          <img id="avatar" class="avatar rounded shadow" src="https://picsum.photos/200" alt="Random avatar" />
+          <div>
+            <h2 id="name">Alex Johnson</h2>
+            <p id="role" class="role">Frontend Developer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h2>Controls</h2>
+        <div class="grid" style="display:grid;grid-template-columns:1fr 1fr; gap:1rem;">
+          <label>Image URL <input id="img-url" placeholder="https://..." /></label>
+          <label>Alt text <input id="img-alt" placeholder="Avatar description" /></label>
+          <label>Name <input id="name-input" /></label>
+          <label>Role <input id="role-input" /></label>
+          <label>Data theme
+            <select id="theme">
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+          </label>
+        </div>
+        <div class="toolbar" style="margin-top:1rem;">
+          <button id="toggle-rounded">Toggle Rounded</button>
+          <button id="toggle-shadow">Toggle Shadow</button>
+          <button id="toggle-hl">Toggle Highlight</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="./solution.js" type="module"></script>
+  </body>
+</html>
