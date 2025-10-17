@@ -65,6 +65,13 @@ btnToggle.addEventListener('click', () => {
     }
 });
 
+btnClear.addEventListener('click', () => {
+    let li = list.querySelectorAll('li');
+    li.forEach((l) => {
+        l.remove();
+    })
+});
+
 
 
 
