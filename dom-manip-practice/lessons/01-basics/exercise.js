@@ -8,3 +8,29 @@
 // 6) Toggle Highlight: toggle .highlight on the currently selected item.
 // 7) Clear All: remove all <li> children from #list.
 // 8) Update #status.textContent after each action (e.g., "Added: Mango").
+
+
+
+
+let title = document.getElementById('title');
+let list = document.getElementById('list');
+let status = document.getElementById('status');
+
+let btnTitle = document.getElementById('btn-title');
+let btnAdd = document.getElementById('btn-add');
+let btnRemove = document.getElementById('btn-remove');
+let btnToggle = document.getElementById('btn-toggle');
+let btnClear = document.getElementById('btn-clear');
+
+
+list.addEventListener('click', (e) => {
+    const clicked = e.target.closest('li');
+    if (!clicked) return;
+
+    list.querySelectorAll('li').forEach((li) => {
+        li.classList.remove('selected');
+    })
+
+    clicked.classList.add('selected');
+});
+
