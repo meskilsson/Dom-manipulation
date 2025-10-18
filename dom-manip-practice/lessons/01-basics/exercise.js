@@ -14,7 +14,7 @@
 
 let title = document.getElementById('title');
 let list = document.getElementById('list');
-let status = document.getElementById('status');
+let statusText = document.getElementById('status');
 
 let btnTitle = document.getElementById('btn-title');
 let btnAdd = document.getElementById('btn-add');
@@ -29,17 +29,22 @@ list.addEventListener('click', (e) => {
 
     list.querySelectorAll('li').forEach((li) => {
         li.classList.remove('selected');
-    })
+    });
 
     clicked.classList.add('selected');
 
     if (clicked) {
         btnRemove.disabled = false;
+        statusText.textContent = `You selected ${clicked.textContent} and enabled the "Remove Selected" button.`;
     }
 });
 
 btnTitle.addEventListener('click', () => {
-    title.textContent = "Whatever";
+    let newTitle = prompt("Add a new title: ");
+    if (newTitle) {
+        title.textContent = newTitle;
+        statusText.textContent = `Title changed to: ${title.textContent}`;
+    }
 });
 
 btnAdd.addEventListener('click', () => {
@@ -48,13 +53,16 @@ btnAdd.addEventListener('click', () => {
         let newLi = document.createElement('li');
         newLi.textContent = addFruit;
         list.appendChild(newLi);
+        statusText.textContent = `You added ${newLi.textContent}`;
     }
 });
+
 
 btnRemove.addEventListener('click', () => {
     let selected = document.querySelector('.selected');
     if (selected) {
         selected.remove();
+        statusText.textContent = `You removed ${selected.textContent}.`;
     }
 });
 
@@ -62,6 +70,7 @@ btnToggle.addEventListener('click', () => {
     let selected = document.querySelector('.selected');
     if (selected) {
         selected.classList.toggle('highlight');
+        statusText.textContent = `You highlighted ${selected.textContent}.`;
     }
 });
 
@@ -69,6 +78,7 @@ btnClear.addEventListener('click', () => {
     let li = list.querySelectorAll('li');
     li.forEach((l) => {
         l.remove();
+        statusText.textContent = `All items removed.`;
     })
 });
 
